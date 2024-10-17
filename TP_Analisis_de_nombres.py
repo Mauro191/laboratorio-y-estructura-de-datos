@@ -7,7 +7,7 @@ print("""A continuacion ingrese los nombres de los alumnos :
 while True : 
     consulta=input("Nombre :").lower()
 
-    if (consulta.isalpha()) or (consulta!=""):
+    if consulta.replace(" ","").isalpha():
         if consulta=="fin":
            break
         elif consulta=="repetir": 
