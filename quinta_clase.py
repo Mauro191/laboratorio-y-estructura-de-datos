@@ -176,28 +176,23 @@ print(resultado)
 # No invoques la función, solo es necesario definirla.
 
 lista_numeros=[1,2,4,-5,3,8]
+
 def todos_positivos(lista_numeros):
+    aux = False
     for numero in lista_numeros:
-        if numero <= 0:
-            return False
-        return True
+        if numero < 0:
+            aux = False
+            break
+        else:
+            aux =True
+    return aux
 
 print(todos_positivos(lista_numeros))
-
-##########################################corregir
-##########################################corregir
-##########################################corregir
-
-
-
-
-
-
-
 
 
 # Práctica Funciones Dinámicas 2
 # Crea una función (suma_menores) que sume los números de una lista (almacenada en la variable lista_numeros) siempre y cuando sean mayores a 0 y menores a 1000, y devuelva el resultado de dicha suma.
+
 lista_numeros=[1233,124,5346,767,897,23]
 
 def suma_menores(lista_numeros):
@@ -210,12 +205,17 @@ def suma_menores(lista_numeros):
 suma_menores(lista_numeros)
 
 
-############################corregir
-
-
-
 # Práctica Funciones Dinámicas 3
 # Crea una función (cantidad_pares) que cuente la cantidad de números pares que existen en una lista (lista_numeros), y devuelva el resultado de dicha cuenta.
+
+lista_numeros=[1,4,6,2,34,2,3]
+lista_numeros_pares=[]
+def cantidad_pares(lista_numeros):
+    for numero in lista_numeros:
+        if numero%2==0:
+            lista_numeros_pares.append(numero)
+    return print(sum(lista_numeros_pares))
+cantidad_pares(lista_numeros)
 
 
 
@@ -236,4 +236,3 @@ def cafe_mas_caro(lista_precios):
 
 cafe, precio = cafe_mas_caro(precios_cafe)
 print(f"El cafe mas caro es {cafe} cuyo precio es {precio}")
-
