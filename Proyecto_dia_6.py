@@ -4,8 +4,7 @@ ruta_recetas = Path('C:/Users/Estudio/recetas')
 
 def bienvenida():
     """saludar e informar al usuario"""
-    print("¡Bienvenido al sistema de recetas!")
-    print(f"La ruta de acceso a la carpeta de recetas es: {ruta_recetas}")
+    print(f"Bienvenido ¡, la ruta de acceso a la carpeta de recetas es: {ruta_recetas}")
     recetas = list(ruta_recetas.glob('**/*'))
     recetas = [r for r in recetas if r.is_file()]
     numero_recetas = len(recetas)
@@ -70,7 +69,6 @@ def opcion_2():
     nombre_receta = input("Escribe el nombre de la nueva receta: ")
     contenido_receta = input("Escribe el contenido de la receta: ")
 
-    # Crear el archivo de la nueva receta
     with open(ruta_recetas / categoria / nombre_receta, 'w') as f:
         f.write(contenido_receta)
     print("Receta creada con éxito.")
@@ -141,11 +139,10 @@ def menu():
         elif opcion == '5':
             opcion_5()
         elif opcion == '6':
-            print("Saliendo del programa...")
+            print("salir del programa...")
             break
         else:
             print("Opción inválida. Por favor, selecciona una opción válida.")
 
-# Ejecutar la bienvenida y el menú
 bienvenida()
 menu()
