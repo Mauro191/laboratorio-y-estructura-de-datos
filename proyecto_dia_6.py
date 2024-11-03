@@ -157,7 +157,7 @@ def menu():
         print(" 3 . Crear una nueva categoría.")
         print(" 4 . Eliminar la receta.")
         print(" 5 . Eliminar la categoría.")
-        print(" 6 . Salirdel sistema.")
+        print(" 6 . Salir del sistema.")
 
         opcion = input("Por favor , selecciona una opción : ")
 
